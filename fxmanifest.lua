@@ -2,7 +2,7 @@
 
 author "Andyyy#7666"
 description "Doorlocks for ND Framework"
-version "3.0.0"
+version "3.1.0"
 
 fx_version "cerulean"
 game "gta5"
@@ -16,9 +16,11 @@ server_script "source/server.lua"
 
 exports {
     "doorAdd",
-    "doorLock",
-    "doorUnlock",
-    "doorsResetDefault"
+    "nearbyDoorLock",
+    "nearbyDoorUnlock",
+    "doorsResetDefault",
+    "updateRegisteredDoors",
+    "getRegisteredDoors"
 }
 
 dependency "ND_Core"
