@@ -66,7 +66,7 @@ function doorChangeState(state)
     return 0
 end
 
-function doorUnlock()
+function nearbyDoorUnlock()
     if not doorNear then return end
     local doorInfo = updatedDoors[doorNear]
     if not doorInfo then return end
@@ -74,7 +74,7 @@ function doorUnlock()
     TriggerServerEvent("ND_Doorlocks:setState", doorNear, doorInfo.state)
 end
 
-function doorLock()
+function nearbyDoorLock()
     if not doorNear then return end
     local doorInfo = updatedDoors[doorNear]
     if not doorInfo then return end
@@ -102,6 +102,24 @@ function doorAdd(doorInfo)
         end
         doorCreate(door)
     end
+end
+
+function updateRegisteredDoors(newDoors)
+    doorsResetDefault()
+    updatedDoors = newDoors
+    for _, doorInfo in pairs(updatedDoors) do
+        for _, door in pairs(doorInfo.doors) do
+            door.state = doorInfo.state
+            if doorInfo.rate then
+                door.rate = doorInfo.rate
+            end
+            doorCreate(door)
+        end
+    end
+end
+
+function getRegisteredDoors()
+    return updatedDoors
 end
 
 RegisterNetEvent("ND:setCharacter", function(character)
