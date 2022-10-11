@@ -1,7 +1,7 @@
 -- For support join my discord: https://discord.gg/Z9Mxu72zZ6
 
 local NDCore = exports["ND_Core"]:GetCoreObject()
-NDCore.Functions.VersionChecker("ND_Doorlocks", GetCurrentResourceName(), "https://github.com/ND-Framework/ND_Doorlock", "https://raw.githubusercontent.com/ND-Framework/ND_Doorlocks/main/fxmanifest.lua")
+NDCore.Functions.VersionChecker("ND_Doorlocks", GetCurrentResourceName(), "https://github.com/ND-Framework/ND_Doorlocks", "https://raw.githubusercontent.com/ND-Framework/ND_Doorlocks/main/fxmanifest.lua")
 
 local syncedDoors = {}
 
