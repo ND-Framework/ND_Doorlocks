@@ -3,6 +3,9 @@
 </p>
 <p align='center'><b><a href="">Preview Video</a></b>
 
+# WARNING!
+This resource has been archived with the release of ND Core v2, use [ox_doorlock](https://overextended.dev/ox_doorlock) instead. ND Properties will be updated or rewritten to support ox_doorlocks soon.
+
 ## Features:
 * Lock/Unlock doors
 * Job permsission
